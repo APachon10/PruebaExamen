@@ -48,7 +48,39 @@ public class test {
 	    count = cantidad de valores
 		SELECT count(edad) FROM personas; 
 		 */
-		i.join_tables();
+		//i.join_tables();
+		
+		//Como llamar a una store procedure.
+		/*public static void main(String[] args) throws SQLException{  
+			 
+	        Connection conn = null;  
+	        try {  
+	            // Creamos la conexion  
+	            conn=ConnectionMySQL.conectar("localhost", "user", "password", "****");  
+	            conn.setAutoCommit(false);  
+	 
+	             CallableStatement cStmt = conn.prepareCall("{call demoSp(?, ?)}");    
+	             cStmt.setString(1, "abcdefg");    
+	             cStmt.setInt(2, 0);  
+	             cStmt.registerOutParameter("inOutParam", Types.INTEGER);    
+	 
+	             cStmt.execute();    
+	             final ResultSet rs = cStmt.getResultSet();  
+	 
+	             while (rs.next()) {  
+	                 System.out.println("Cadena de caracteres pasada como parametro de entrada="+rs.getString("inputParam"));  
+	             }    
+	 
+	             int outputValue = cStmt.getInt("inOutParam");  
+	             System.out.println("Parametro de salida incrementado="+outputValue);  
+	 
+	        }catch (Exception e) {  
+	            conn.rollback();  
+	            e.printStackTrace();  
+	        }finally{  
+	            conn.close();  
+	        }  
+	    }  */
 	}
 	
 	public void insertarIdioma(bfPlayer i) {
